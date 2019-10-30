@@ -1,0 +1,31 @@
+name:                sudoku
+version:             0.1.0.0
+github:              "jbrot/sudoku"
+license:             BSD3
+author:              "Joshua Brot"
+maintainer:          "jbrot@umich.edu"
+copyright:           "2019(c) Joshua Brot"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/jbrot/sudoku#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- vector
+
+library:
+  source-dirs: src
+
+executables:
+  sudoku-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - sudoku
